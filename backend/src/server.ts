@@ -40,6 +40,10 @@ function PoolsController() {
       title: z.string(),
     });
 
+    console.log(
+      '🚀 ~ file: server.ts ~ line 44 ~ app.post ~ request.body',
+      request.body,
+    );
     const { title } = createPoolBody.parse(request.body);
 
     const generate = new ShortUniqueId({ length: 6 });
